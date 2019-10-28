@@ -7,8 +7,8 @@ tagline: "Organic Products at Non-Organic Prices"
 <!-- Home Banner -->
 <section class="home-banner">
     <h1 class="home-banner--heading">{{ title }}</h1>
-    <img src="assets/images/headers/bags-header-desktop.png" alt="" class="home-banner--bags-shelf desktop-only">
-    <img src="assets/images/headers/bags-header-mobile.png" alt="" class="home-banner--bags-shelf mobile-only">
+    <img src="/assets/images/headers/bags-header-desktop.png" alt="" class="home-banner--bags-shelf desktop-only">
+    <img src="/assets/images/headers/bags-header-mobile.png" alt="" class="home-banner--bags-shelf mobile-only">
     <p class="home-banner--subhead">
         {{ tagline}}
     </p>
@@ -22,7 +22,7 @@ tagline: "Organic Products at Non-Organic Prices"
         {% endfor %}
     </ul><!-- End Social Block -->
     <span class="arrow-down">
-        <img src="assets/images/arrow-down.svg" alt="Scroll down to learn more." width="40px" height="40px">
+        <img src="/assets/images/arrow-down.svg" alt="Scroll down to learn more." width="40px" height="40px">
     </span>
 </section><!-- End Home Banner -->
 
@@ -30,7 +30,7 @@ tagline: "Organic Products at Non-Organic Prices"
 <main>
     <!-- Home Content - OMRI Section -->
     <section class="home-content-section omri-section">
-        <img src="assets/images/home-omri-bg.jpg" alt="" class="mobile-only">
+        <img src="/assets/images/home-omri-bg.jpg" alt="" class="mobile-only">
         <div class="omri-card">
             <h2>Omri Listed</h2>
             <p>Organic Materials Review Institute (OMRI) is a nonprofit organization that provides an independent
@@ -38,7 +38,7 @@ tagline: "Organic Products at Non-Organic Prices"
                 other products. OMRI focuses purely on what goes into making these products to certify all the
                 inputs are organic. The OMRI seal ensures everything in the Top Shelf bags are produced 100%
                 organically.</p>
-            <img src="assets/images/omri-logo.png" alt="OMRI Listed, For Organic Use">
+            <img src="/assets/images/omri-logo.png" alt="OMRI Listed, For Organic Use">
             <div class="divider-line-1"></div>
             <a href="https://www.omri.org/about-omri-listed-products" class="primary-button">Learn More</a>
         </div>
@@ -50,7 +50,7 @@ tagline: "Organic Products at Non-Organic Prices"
         <ul class="product-cards-list">
          {% for products in collections.products %}
             <li class="product-card card-{{ products.data.slug }}">
-                <a href="#"><img src="{{ products.data.image }}" alt=""
+                <a href="{{ products.url }}"><img src="{{ products.data.image }}" alt=""
                         class="product-card-image"></a>
                 <div class="proudct-card--text">
                     <h3 class="product-card--title">{{ products.data.title }}</h3>
