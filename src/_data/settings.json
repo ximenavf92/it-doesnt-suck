@@ -1,0 +1,24 @@
+{ 
+    "siteTagline": "Organic Products at Non-Organic Prices",
+    "socials": [
+        {
+            "name": "facebook",
+            "url": "https://www.facebook.com/TopShelfOrganic/"
+        },
+        {
+            "name": "twitter",
+            "url": "https://twitter.com/OrganicTopShelf"
+        },
+        {
+            "name": "instagram",
+            "url": "https://www.instagram.com/OrganicTopShelf/"
+        },
+        {
+            "name": "pinterest",
+            "url": "https://www.pinterest.com/TopShelfOrganic/"
+        },
+        {
+            "name": "linkedin",
+            "url": "https://www.linkedin.com/company/TopShelfOrganic/"
+        } ]
+    }

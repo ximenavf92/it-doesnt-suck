@@ -100,9 +100,16 @@
     align-self: center;
 }
 
-.product-howto--table table thead {
-    background-color: var(--pottingSoil);
-}
+/* Table Head Color Overrides */
+.pottingsoil-table table thead {background-color: var(--pottingSoil);}
+.gardensoil-table table thead  {background-color: var(--gardenSoil);}
+.compost-table table thead  {background-color: var(--compost);}
+.perlite-table table thead  {background-color: var(--perlite);}
+.peatmoss-table table thead  {background-color: var(--peatMoss);}
+.cactus-table table thead  {background-color: var(--cactusSoil);}
+.rosesoil-table table thead  {background-color: var(--roseSoil);}
+.expandedshale-table table thead  {background-color: var(--expandedShale);}
+
 
 .product-howto--table table th {
     padding: 15px;

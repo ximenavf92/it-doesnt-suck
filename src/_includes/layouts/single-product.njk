@@ -1,0 +1,109 @@
+{% extends "base.njk" %}
+
+{% block content %}
+<!-- Product Banner -->
+<section class="product-banner">
+    <div class="product-banner--text">
+        <h1 class="product-banner--heading">{{ title }}</h1>
+        <p class="product-banner--description">
+            Top Shelf® Potting Soil is proud to be an OMRI® listed organic product. We start by taking our Top Shelf
+            Compost then add sand, pine bark, and perlite. This mix forms an ideal media for your plants to grow
+            strong
+            in container pots, raised beds, or your garden. The Top Shelf Compost in this mix has met the STA
+            requirements set forth by the US Composting Council®.
+        </p>
+        <!-- Begin Social Block -->
+        <ul class="social-block">
+            {% for socials in settings.socials %}
+            <li><a href="{{ socials.url }}"><i class="fa fa-{{ socials.name }}"></i></a></li>
+            {% endfor %}
+        </ul><!-- End Social Block -->
+    </div>
+</section><!-- End Home Banner -->
+
+<!-- Begin Main Content -->
+<main>
+    <section class="product-howto">
+        <h2>How To Use</h2>
+        <!-- Directions Grid -->
+        <div class="product-howto--directions">
+            <ol class="how-to-use-list">
+                <li>Apply 2”-4” of Top Shelf® Potting Soil to entire planting area and mix together with a spade or
+                    shovel.</li>
+                <li>Depending on plant type, container size, and placement keep the soil moist but not saturated.
+                    After planting, continue watering as directed.</li>
+                <li>When planting new plants: fill the pot with Top Shelf® Potting Soil and plant as normal.</li>
+                <li>Use Top Shelf® Fertilizers to encourage continued plant growth year round.</li>
+            </ol>
+            <!-- Application Rates Table -->
+            <div class="product-howto--table {{ slug }}-table ">
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <th style="text-align: center;" align="left">Bags</th>
+                            <th style="text-align: center;" align="left">.5″ Depth</th>
+                            <th style="text-align: center;" align="left">2″ Depth</th>
+                            <th style="text-align: center;" align="left">4″ Depth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td style="text-align: center;" align="left">1</td>
+                            <td style="text-align: center;" align="left">24 sq. ft.</td>
+                            <td style="text-align: center;" align="left">6 sq. ft.</td>
+                            <td style="text-align: center;" align="left">3 sq. ft.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" align="left">2</td>
+                            <td style="text-align: center;" align="left">48 sq. ft.</td>
+                            <td style="text-align: center;" align="left">12 sq. ft.</td>
+                            <td style="text-align: center;" align="left">6 sq. ft.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" align="left">3</td>
+                            <td style="text-align: center;" align="left">72 sq. ft.</td>
+                            <td style="text-align: center;" align="left">18 sq. ft.</td>
+                            <td style="text-align: center;" align="left">9 sq. ft.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" align="left">4</td>
+                            <td style="text-align: center;" align="left">96 sq. ft.</td>
+                            <td style="text-align: center;" align="left">24 sq. ft.</td>
+                            <td style="text-align: center;" align="left">12 sq. ft.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" align="left">5</td>
+                            <td style="text-align: center;" align="left">120 sq. ft.</td>
+                            <td style="text-align: center;" align="left">30 sq. ft.</td>
+                            <td style="text-align: center;" align="left">15 sq. ft.</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: center;" align="left">6</td>
+                            <td style="text-align: center;" align="left">144 sq. ft.</td>
+                            <td style="text-align: center;" align="left">36 sq. ft.</td>
+                            <td style="text-align: center;" align="left">18 sq. ft.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- End Application Rates Table -->
+        </div><!-- End How To Directions Grid-->
+    </section><!-- End How To Use Section-->
+
+    <!-- Interior Content - OMRI Section -->
+    <section class="product-content-section omri-section">
+        <img src="/assets/images/interior-omri-bg.jpg" alt="" class="mobile-only">
+        <div class="omri-card">
+            <h2>Omri Listed</h2>
+            <p>Organic Materials Review Institute (OMRI) is a nonprofit organization that provides an independent
+                review of the ingredients in products such as soils, fertilizers, soil amendments, and thousands of
+                other products. OMRI focuses purely on what goes into making these products to certify all the
+                inputs are organic. The OMRI seal ensures everything in the Top Shelf bags are produced 100%
+                organically.</p>
+            <img src="/assets/images/omri-logo.png" alt="OMRI Listed, For Organic Use">
+            <div class="divider-line-1"></div>
+            <a href="https://www.omri.org/about-omri-listed-products" class="primary-button">Learn More</a>
+        </div>
+    </section><!-- End Home Content - OMRI Section -->
+
+    {% endblock content %}

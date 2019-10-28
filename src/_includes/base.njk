@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{{ title }} | {{ settings.siteTagline }}</title>
+
+    <!-- SEO -->
+    <meta name="description"
+        content="Top Shelf® Organic offers a line of OMRI® certified products that provide the best ingredients to grow your garden.">
+    <link rel="canonical" href="https://topshelforganic.com/">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Top Shelf® Organic – Organic Products at Non-Organic Prices">
+    <meta property="og:description"
+        content="Top Shelf® Organic offers a line of OMRI® certified products that provide the best ingredients to grow your garden.">
+    <meta property="og:url" content="https://topshelforganic.com/">
+    <meta property="og:site_name" content="Top Shelf® Organic">
+
+    <!-- Linked CSS/JS-->
+    <link rel="shortcut icon" href="/assets/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/product.css">
+</head>
+
+<body class="home">
+    <header>
+        <nav class="main-nav">
+            <ul class="main-nav--list">
+                <li><a href="/">Home</a></li>
+                {% for products in collections.products %}
+                <li><a href="{{ products.url }}">{{ products.data.menu_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+    </header>
+
+
+    {% block content %}
+        {{ content | safe }}
+    {% endblock content %}
+
+            <!-- Contact Us -->
+        <section class=" contact-section">
+                    <h2>Contact Us</h2>
+                    <form name="contact" method="POST" data-netlify="true">
+                        <p class="contact-fname">
+                            <label>First Name<br />
+                                <input type="text" name="first-name" /></label>
+                        </p>
+                        <p class="contact-lname">
+                            <label>Last Name<br />
+                                <input type="text" name="last-name" /></label>
+                        </p>
+                        <p class="contact-email">
+                            <label> Email<br />
+                                <input type="email" name="email" /></label>
+                        </p>
+                        <p class="contact-phone">
+                            <label> Phone Number<br />
+                                <input type="phone" name="phone" /></label>
+                        </p>
+                        <p class="contact-message">
+                            <label>Message<br />
+                                <textarea name="message"></textarea></label>
+                        </p>
+                        <p class="contact-submit">
+                            <button type="submit" class="primary-button">Submit</button>
+                        </p>
+                    </form>
+        </section><!-- End Contact Us -->
+    </main><!-- End Main Content -->
+    <!-- Begin Footer -->
+    <footer>
+        <!-- Newsletter Subscribe Form -->
+        <section class="newsletter-subscribe">
+            <h2>Subscribe to our Newsletter</h2>
+            <form name="newsletter" method="POST" data-netlify="true">
+                <p class="newsletter-name">
+                    <label><span class="sr-only">Name</span><input type="text" name="name" placeholder="Name" /></label>
+                </p>
+                <p class="newsletter-email">
+                    <label><span class="sr-only">Email</span><input type="text" name="email"
+                            placeholder="Email" /></label>
+                </p>
+                <p class="newsletter-submit">
+                    <button type="submit" class="primary-button">Subscribe</button>
+                </p>
+            </form>
+        </section><!-- End Newsletter Subscribe Form -->
+        <nav class="main-nav">
+            <ul class="main-nav--list">
+                <li><a href="#">Home</a></li>
+                {% for products in collections.products %}
+                <li><a href="{{ products.url }}">{{ products.data.menu_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </nav>
+        <!-- Footer Social Links & Copyright-->
+        <section class="social-copyright">
+            <h2>Top Shelf® Organic</h2>
+            <!-- Begin Social Block -->
+            <ul class="social-block">
+            {% for socials in settings.socials %}
+                <li><a href="{{ socials.url }}"><i class="fa fa-{{ socials.name }}"></i></a></li>
+            {% endfor %}
+            </ul><!-- End Social Block -->
+            <p class="copyright">© 2019 - Top Shelf® Organic – A New Earth Brand | Online Presence by Benson Design</p>
+        </section><!-- End Footer Social Links & Copyright-->
+    </footer>
+    <!-- End Footer -->
+</body>
+
+</html>
